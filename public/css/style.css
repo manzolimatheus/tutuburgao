@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
+* {
+  font-family: 'Fira Sans Condensed', sans-serif;
+  scroll-behavior: smooth;
+}
+
+h1,h2,h3{
+  font-family: 'Fredoka One', cursive !important;
+}
+
+p{
+  font-size: 14pt;
+}
+
+img {
+  object-fit: cover;
+}
+
+#myModal li::marker{
+  color: #00c774;
+}
+
+#myModal h5{
+  border-left: 4px solid #00c774;
+  padding-left: 5%;
+}
+
+nav ul li a {
+  color: white;
+  font-weight: bold;
+  margin-right: 20px;
+}
+
+nav ul li a:hover {
+  color: #ffae00;
+  border-bottom: 1px solid #ffae00;
+  transition: color 0.3s linear;
+}
+
+.logo{
+  width: 25%;
+}
+
+header h1{
+  color: white;
+  text-decoration: underline;
+  font-size: 48pt;
+}
+
+@media (max-width: 768px) {
+  nav {
+    background-color: #343a40;
+  }
+
+  .logo{
+    width: 80% !important;
+  }
+
+  .init-group{
+    height: 500px !important;
+  }
+}
+
+.init-group {
+  padding-bottom: 10%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  height: fit-content;
+}
+
+.bg_video {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -100;
+  filter: brightness(0.7);
+}
+
+.titulo-fino {
+  font-weight: 200 !important;
+  margin-bottom: 4%;
+}
+
+.titulo-red {
+  color: #d34e37;
+  font-weight: 800;
+}
+
+.titulo-dark {
+  color: #1f1f1f;
+  font-weight: 800;
+}
+
+.card {
+  border-radius: 50px !important;
+  margin-left: 5% !important;
+  border: 0 !important;
+}
+
+.card-img-top {
+  height: 200px;
+  clip-path: circle();
+  margin: 5%;
+}
+
+.zoom:hover {
+  transform: scale(1.1);
+  transition: 0.2s;
+}
+
+/* Scrollbar */
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Cor Seleção */
+::-moz-selection { /* Code for Firefox */
+  background: #ffae00;
+}
+
+::selection {
+  background: #ffae00;
+}
+
+.img-globo img{
+  object-fit: cover;
+}
+
+.oferecemos {
+  background: rgb(255, 179, 0);
+  background: linear-gradient(
+    167deg,
+    rgba(255, 179, 0, 1) 0%,
+    rgba(255, 68, 0, 1) 100%
+  );
+}
+
+.oferecemos .card img {
+  height: 160px;
+  width: 100%;
+  margin: 5%;
+  clip-path: circle();
+  object-fit: cover;
+}
+
+.footer{
+  background-color: #1f1f1f;
+  color: white;
+  padding: 5%;
+}
+
+.links a{
+  color: white;
+  text-decoration: none;
+  font-size: 14pt;
+  margin-top: 100px;
+}
+
+.footer-links a:hover{
+  color: orange;
+  border-left: 3px solid orange;
+  padding-left: 1%;
+  transition: all 0.5s;
+}
+
+.titulo-footer{
+  text-align: center;
+  font-size: 18pt !important;
+}
+
+.endline{
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 1%;
+}
+
+.endline img{
+  width: 12%;
+}
+
+@media (max-width: 768px) {
+
+  .endline img{
+    width: 50%;
+  }
+
+  header h1{
+    font-size: xx-large;
+  }
+  
+}

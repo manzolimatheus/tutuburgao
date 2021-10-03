@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="Lanche, Hamburguer, Hamburgueria" />
+    <title>TutuBurgão - Os hambúrgueres mais saborosos!</title>
+    <link rel="stylesheet" href="public/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="shortcut icon"
+      href="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/285/hamburger_1f354.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  </head>
+  <body>
+  <!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title"><strong id="modaltitle">Modal title</strong></h3>
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal" aria-label="Close">X</button>
+      </div>
+      <div class="modal-body">
+       <div id="modalcontent"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <div class="init-group">
+      <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+          <button
+            class="navbar-toggler bg-dark text-white"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarTogglerDemo01"
+            aria-controls="navbarTogglerDemo01"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <ion-icon name="reorder-three-outline"></ion-icon>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 mx-auto">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#"
+                  >Início</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#cardapio">Cardápio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#footer">Contato</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#sobre">Sobre</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <header class="p-3 text-center">
+        <div>
+          <img
+            src="public/img/logo.png"
+            alt="Logo TutuBurgão"
+            class="img-fluid logo"
+            data-aos="zoom-in"
+          />
+          <h1>Tutuburgão</h1>
+        </div>
+      </header>
+
+      <!-- Video de fundo -->
+
+      <video
+        autoplay
+        loop
+        muted
+        class="bg_video"
+        poster="/public/img/destaque.png"
+      >
+        <source src="public/img/video.mp4" type="video/mp4" />
+      </video>
+    </div>
+
+    <!-- HISTÓRIA -->
+
+    <div class="container-fluid" id="sobre">
+      <div class="row">
+        <div class="col-sm-6 bg-white">
+          <div class="container p-3 mt-3 text-left">
+            <h1 class="titulo-fino text-center" data-aos="fade-up">
+              <ion-icon name="earth-outline"></ion-icon> NOSSA HISTÓRIA NOS
+              MÍNIMOS DETALHES
+            </h1>
+            <p data-aos="fade-up">
+              A TutuBurgão nasceu como hamburgueria depois da década de 80 com a
+              união de diversos amigos, do bairro Chaparral. Todos
+              compartilhavam da paixão por hambúrguer.
+              <br />
+              Por conta disso, durante anos esses amigos tentavam sempre se
+              superar criando receitas, cada vez mais ousadas. No fim, sobraram
+              apenas alguns amantes do hambúrguer, os quais se reuniram e
+              criaram a TutuBurgão, que hoje é uma das mais conhecidas de Mogi
+              Guaçu - SP e região.
+            </p>
+          </div>
+        </div>
+        <div class="col-sm-6 text-center p-0 m-0">
+          <!-- IMAGEM OU ANIMAÇÃO HAMBURGUER -->
+          <img
+            src="public/img/img01.jpg"
+            alt="Homem utilizando tablet"
+            class="w-100 h-100"
+          />
+        </div>
+      </div>
+    </div>
+
+    <!-- BURGUERS -->
+
+    <div
+      class="container-fluid text-center burguers bg-warning p-5"
+      id="cardapio"
+    >
+      <h1 class="titulo-red" data-aos="zoom-in">
+        <ion-icon name="flame-outline"></ion-icon> Os TutuBurguers que você mais
+        ama
+      </h1>
+      <div class="row mt-5">
+        <div class="col-sm-3 mt-3">
+          <div class="card zoom" style="width: auto" data-aos="flip-left">
+            <img
+              src="public/img/burguer1.jpg"
+              class="card-img-top mx-auto"
+              alt="Hamburguer"
+            />
+            <div class="card-body">
+              <h4><strong>Big Bob</strong></h4>
+              <p class="card-text">
+                Um Hambúrguer com dois pedaços suculentos de carne e muito
+                queijo!
+                <button
+                  class="btn btn-dark rounded-pill w-100 mt-3 p-3"
+                  onclick="ShowInfo(0)"
+                >
+                  Saiba mais
+                </button>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3 mt-3">
+          <div class="card zoom" style="width: auto" data-aos="flip-left">
+            <img
+              src="public/img/burguer2.jpg"
+              class="card-img-top mx-auto"
+              alt="Hamburguer"
+            />
+            <div class="card-body">
+              <h4><strong>Little Billy</strong></h4>
+              <p class="card-text">
+                O básiquinho que todo mundo ama! Perfeito para matar sua fome.
+                <button class="btn btn-dark rounded-pill w-100 mt-3 p-3" onclick="ShowInfo(1)">
+                  Saiba mais
+                </button>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3 mt-3">
+          <div class="card zoom" style="width: auto" data-aos="flip-left">
+            <img
+              src="public/img/burguer3.jpg"
+              class="card-img-top mx-auto"
+              alt="Hamburguer"
+            />
+            <div class="card-body">
+              <h4><strong>The Shark</strong></h4>
+              <p class="card-text">
+                O clássico da casa, acompanhando cebola, tomate e duas fatias de
+                queijo!
+                <button class="btn btn-dark rounded-pill w-100 mt-3 p-3" onclick="ShowInfo(2)">
+                  Saiba mais
+                </button>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3 mt-3">
+          <div class="card zoom" style="width: auto" data-aos="flip-left">
+            <img
+              src="public/img/burguer4.jpg"
+              class="card-img-top mx-auto"
+              alt="Hamburguer"
+            />
+            <div class="card-body">
+              <h4><strong>Cheese Pop</strong></h4>
+              <p class="card-text">
+                O hambúrguer para quem ama Bacon e muito queijo! Um dos mais
+                populares.
+                <button class="btn btn-dark rounded-pill w-100 mt-3 p-3" onclick="ShowInfo(3)">
+                  Saiba mais
+                </button>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- LOCALIZADO EM -->
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-6 text-center img-globo w-100 p-0">
+          <img
+            src="https://images.unsplash.com/photo-1505826759037-406b40feb4cd?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1472&q=80"
+            alt="Restaurante"
+            class="img-fluid"
+          />
+        </div>
+        <div class="col-sm-6 bg-white">
+          <div class="container p-3 mt-3 text-left">
+            <h1 class="titulo-fino text-center" data-aos="fade-up">
+              <ion-icon name="git-compare-outline"></ion-icon> +100 FRANQUIAS AO
+              REDOR DO MUNDO
+            </h1>
+            <p data-aos="fade-up">
+              Nosso amor pela comida acabou por se tornar contagioso, seja parte
+              desse time também, seja um franqueado ao lado de +1000
+              TutuWorkers, todos trabalhando em conjunto.
+              <br />
+              Sinta-se à vontade para pedir ajuda e apoio quando precisar, somos
+              uma grande equipe disposta a fazer o que tiver ao nosso alcance!
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="oferecemos container-fluid text-center p-3">
+      <div class="container">
+        <h1 class="titulo-dark mt-5 mb-5" data-aos="zoom-in">
+          <ion-icon name="leaf-outline"></ion-icon> O que o Tutuburgão oferece?
+        </h1>
+        <div class="col-sm w-100">
+          <div class="card mb-3" data-aos="zoom-in-down">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img
+                  src="https://images.unsplash.com/photo-1517434324-1db605ff03c7?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=435&q=80"
+                  class="img-fluid mx-auto"
+                  alt="..."
+                />
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h3 class="card-title">
+                    <ion-icon name="fast-food-outline"></ion-icon> MUITO SABOR
+                  </h3>
+                  <p class="card-text text-muted">
+                    Trabalhamos com ingredientes de ponta para sempre
+                    proporcionar o melhor sabor aos nossos clientes!
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card mb-3" data-aos="zoom-in-down">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img
+                  src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=870&q=80"
+                  class="img-fluid mx-auto"
+                  alt="..."
+                />
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h3 class="card-title">
+                    <ion-icon name="sparkles-outline"></ion-icon> O MELHOR
+                    ATENDIMENTO
+                  </h3>
+                  <p class="card-text text-muted">
+                    Nossos funcionários possuem ótimo treinamento e qualificação
+                    para melhor atendê-los!
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card mb-5" data-aos="zoom-in-down">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img
+                  src="https://images.unsplash.com/photo-1615996001375-c7ef13294436?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=871&q=80"
+                  class="img-fluid mx-auto"
+                  alt="..."
+                />
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h3 class="card-title">
+                    <ion-icon name="shapes-outline"></ion-icon> MUITAS OPÇÕES
+                  </h3>
+                  <p class="card-text text-muted">
+                    Tentamos sempre adicionar cada vez mais hambúrgueres ao
+                    nosso cardápio para atender a todos os gostos!
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer" id="footer">
+      <div class="row">
+        <div class="col-sm">
+          <div class="footer-logo">
+            <h3>TutuBurgão</h3>
+            <q> Os hambúrgueres mais saborosos! </q>
+          </div>
+        </div>
+        <div class="col-sm">
+          <div class="footer-links">
+            <h3>Acesso rápido</h3>
+            <div class="links">
+              <a href="#"><ion-icon name="home-outline"></ion-icon> Início</a>
+              <br />
+              <a href="#cardapio"
+                ><ion-icon name="fast-food-outline"></ion-icon> Cardápio</a
+              >
+              <br />
+              <a href="#footer"><ion-icon name="call-outline"></ion-icon> Contato</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm">
+          <h3>Venha conhecer</h3>
+          <p>
+            <ion-icon name="location-outline"></ion-icon> R. Quinze de Novembro,
+            238 - Centro, Mogi Guaçu - SP, 13840-017
+          </p>
+          <p>
+            <ion-icon name="mail-outline"></ion-icon>
+            contato.tutuburgao@tutuburgao.com
+          </p>
+          <p>
+            <ion-icon name="time-outline"></ion-icon> Aberto das 15h às 0h de
+            terça a domingo!
+          </p>
+        </div>
+      </div>
+    </footer>
+    <div class="endline">
+      Powered by
+      <br />
+      <img src="public/img/zork-logo.png" alt="Logo Zork" />
+    </div>
+
+    <script src="public/js/script.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>
